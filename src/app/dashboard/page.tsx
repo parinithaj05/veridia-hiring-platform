@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { Button } from "../../components/ui/button";
 
+// Color classes for statuses
 function statusBadgeClass(s: string) {
   const map: Record<string, string> = {
     Draft: "bg-gray-500/15 text-gray-600",
@@ -27,18 +28,21 @@ function statusBadgeClass(s: string) {
 }
 
 export default function DashboardPage() {
+  // Select stable values from stores
   const user = useAuthStore((s) => s.user);
-  const apps = useApplicationsStore((s) =>
-    user ? s.forUser(user.id) : []
-  );
+  const allApps = useApplicationsStore((s) => s.applications);
   const router = useRouter();
 
+  // Guard
   useEffect(() => {
     if (!user) router.replace("/login");
     else if (user.role !== "applicant") router.replace("/admin");
   }, [user, router]);
 
   if (!user || user.role !== "applicant") return null;
+
+  // Derive user's applications OUTSIDE the selector (stable)
+  const apps = allApps.filter((a) => a.userId === user.id);
 
   return (
     <div className="space-y-6">
