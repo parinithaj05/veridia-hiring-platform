@@ -1,9 +1,8 @@
 # Veridia Hiring Platform (Frontend)
 
-Live demo: https://YOUR-VERCEL-URL.vercel.app  
-Admin test: admin@veridia.com • Password: Admin123
-
 A clean Next.js hiring platform for Veridia. Applicants can register, apply, and track status. Admins can search, filter, and set Accepted (Hired), Waitlisted, or Rejected with notes and status history.
+
+Admin test: admin@veridia.com • Password: Admin123
 
 ## Tech Stack
 - Next.js 15 + TypeScript
@@ -28,20 +27,21 @@ A clean Next.js hiring platform for Veridia. Applicants can register, apply, and
 Draft • Submitted • Under Review • Shortlisted • Rejected • Hired (displayed as “Accepted”) • Waitlisted
 
 ## How to run locally
-- Node 18+ (recommended Node 20)
-- Install:
-  ```bash
-  npm install
-Dev:
+- Prerequisite: Node 18+ (recommended Node 20)
+- Install dependencies:
+```bash
+npm install
+Start dev server:
 Bash
 
 npm run dev
 Open http://localhost:3000
-Build:
+
+Build for production:
 Bash
 
 npm run build
-Start (prod build):
+Start production build:
 Bash
 
 npm run start
@@ -55,14 +55,8 @@ Notes
 Frontend-only demo (Zustand + localStorage).
 For production: add backend (Supabase/Firebase/Node API), secure auth, and password hashing.
 Screenshots
-Home (Applicant tab)
+Home / Applicant tab
 Login
 Apply Form
 Applicant Dashboard
 Admin Applications List
-
-
-
-
-
-
