@@ -1,5 +1,7 @@
 # Veridia Hiring Platform (Frontend)
 
+Live demo: https://main.d4jzhm4gaw9jp.amplifyapp.com/
+
 A clean Next.js hiring platform for Veridia. Applicants can register, apply, and track status. Admins can search, filter, and set Accepted (Hired), Waitlisted, or Rejected with notes and status history.
 
 Admin test: admin@veridia.com • Password: Admin123
